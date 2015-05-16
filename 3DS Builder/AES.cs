@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Security.Cryptography;
 
-namespace _3DS_Builder
+namespace CTR
 {
     public class AesCtr
     {
@@ -43,7 +43,6 @@ namespace _3DS_Builder
             return inputCount;
         }
     }
-
     public class AesCounter
     {
         public const int BufferSize = 0x400000; //4 MB Buffer
@@ -84,14 +83,14 @@ namespace _3DS_Builder
         {
             ulong uvalue = value;
             ulong swapped =
-                  ((0x00000000000000FF) & (uvalue >> 56)
-                 | (0x000000000000FF00) & (uvalue >> 40)
-                 | (0x0000000000FF0000) & (uvalue >> 24)
-                 | (0x00000000FF000000) & (uvalue >> 8)
-                 | (0x000000FF00000000) & (uvalue << 8)
-                 | (0x0000FF0000000000) & (uvalue << 24)
-                 | (0x00FF000000000000) & (uvalue << 40)
-                 | (0xFF00000000000000) & (uvalue << 56));
+                    ((0x00000000000000FF) & (uvalue >> 56)
+                    | (0x000000000000FF00) & (uvalue >> 40)
+                    | (0x0000000000FF0000) & (uvalue >> 24)
+                    | (0x00000000FF000000) & (uvalue >> 8)
+                    | (0x000000FF00000000) & (uvalue << 8)
+                    | (0x0000FF0000000000) & (uvalue << 24)
+                    | (0x00FF000000000000) & (uvalue << 40)
+                    | (0xFF00000000000000) & (uvalue << 56));
             return swapped;
         }
     }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.PB_Show = new System.Windows.Forms.ProgressBar();
-            this.TB_Progress = new System.Windows.Forms.TextBox();
             this.TB_Romfs = new System.Windows.Forms.TextBox();
             this.B_Go = new System.Windows.Forms.Button();
             this.B_Romfs = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.TB_Serial = new System.Windows.Forms.TextBox();
             this.CHK_PrebuiltRomfs = new System.Windows.Forms.CheckBox();
             this.CHK_PrebuiltExefs = new System.Windows.Forms.CheckBox();
+            this.RTB_Progress = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // PB_Show
@@ -54,15 +54,6 @@
             this.PB_Show.Name = "PB_Show";
             this.PB_Show.Size = new System.Drawing.Size(434, 23);
             this.PB_Show.TabIndex = 10;
-            // 
-            // TB_Progress
-            // 
-            this.TB_Progress.Location = new System.Drawing.Point(10, 139);
-            this.TB_Progress.Multiline = true;
-            this.TB_Progress.Name = "TB_Progress";
-            this.TB_Progress.ReadOnly = true;
-            this.TB_Progress.Size = new System.Drawing.Size(306, 186);
-            this.TB_Progress.TabIndex = 9;
             // 
             // TB_Romfs
             // 
@@ -217,11 +208,22 @@
             this.CHK_PrebuiltExefs.UseVisualStyleBackColor = true;
             this.CHK_PrebuiltExefs.CheckedChanged += new System.EventHandler(this.CHK_PrebuiltExefs_CheckedChanged);
             // 
+            // RTB_Progress
+            // 
+            this.RTB_Progress.BackColor = System.Drawing.SystemColors.Control;
+            this.RTB_Progress.Location = new System.Drawing.Point(8, 139);
+            this.RTB_Progress.Name = "RTB_Progress";
+            this.RTB_Progress.ReadOnly = true;
+            this.RTB_Progress.Size = new System.Drawing.Size(308, 186);
+            this.RTB_Progress.TabIndex = 25;
+            this.RTB_Progress.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 361);
+            this.Controls.Add(this.RTB_Progress);
             this.Controls.Add(this.CHK_PrebuiltExefs);
             this.Controls.Add(this.CHK_PrebuiltRomfs);
             this.Controls.Add(this.TB_Serial);
@@ -236,7 +238,6 @@
             this.Controls.Add(this.TB_Exheader);
             this.Controls.Add(this.TB_Exefs);
             this.Controls.Add(this.PB_Show);
-            this.Controls.Add(this.TB_Progress);
             this.Controls.Add(this.TB_Romfs);
             this.Controls.Add(this.B_Go);
             this.Controls.Add(this.B_Romfs);
@@ -252,7 +253,6 @@
         #endregion
 
         private System.Windows.Forms.ProgressBar PB_Show;
-        private System.Windows.Forms.TextBox TB_Progress;
         private System.Windows.Forms.TextBox TB_Romfs;
         private System.Windows.Forms.Button B_Go;
         private System.Windows.Forms.Button B_Romfs;
@@ -269,6 +269,7 @@
         private System.Windows.Forms.TextBox TB_Serial;
         private System.Windows.Forms.CheckBox CHK_PrebuiltRomfs;
         private System.Windows.Forms.CheckBox CHK_PrebuiltExefs;
+        private System.Windows.Forms.RichTextBox RTB_Progress;
     }
 }
 
